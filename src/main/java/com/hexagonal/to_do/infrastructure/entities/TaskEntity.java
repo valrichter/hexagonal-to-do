@@ -41,6 +41,16 @@ public class TaskEntity {
         );
     }
 
+    public Task toDomainModel() {
+        return new Task(
+                id,
+                title,
+                description,
+                createdAt,
+                completed
+        );
+    }
+
     public Long getId() {
         return id;
     }
