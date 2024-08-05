@@ -7,7 +7,7 @@ import com.hexagonal.to_do.domain.ports.in.*;
 import java.util.List;
 import java.util.Optional;
 
-public class taskService implements CreateTaskUseCase, DeleteTaskUseCase, UpdateTaskUseCase, RetrieveTaskUseCase, GetAdditionalTaskInfoUseCase {
+public class TaskService implements CreateTaskUseCase, DeleteTaskUseCase, UpdateTaskUseCase, RetrieveTaskUseCase, GetAdditionalTaskInfoUseCase {
 
     private final CreateTaskUseCase createTaskUseCase;
     private final DeleteTaskUseCase deleteTaskUseCase;
@@ -15,7 +15,7 @@ public class taskService implements CreateTaskUseCase, DeleteTaskUseCase, Update
     private final UpdateTaskUseCase updateTaskUseCase;
     private final GetAdditionalTaskInfoUseCase getAdditionalTaskInfoUseCase;
 
-    public taskService(CreateTaskUseCase createTaskUseCase, DeleteTaskUseCase deleteTaskUseCase, RetrieveTaskUseCase retrieveTaskUseCase, UpdateTaskUseCase updateTaskUseCase, GetAdditionalTaskInfoUseCase getAdditionalTaskInfoUseCase) {
+    public TaskService(CreateTaskUseCase createTaskUseCase, DeleteTaskUseCase deleteTaskUseCase, RetrieveTaskUseCase retrieveTaskUseCase, UpdateTaskUseCase updateTaskUseCase, GetAdditionalTaskInfoUseCase getAdditionalTaskInfoUseCase) {
         this.createTaskUseCase = createTaskUseCase;
         this.deleteTaskUseCase = deleteTaskUseCase;
         this.retrieveTaskUseCase = retrieveTaskUseCase;
