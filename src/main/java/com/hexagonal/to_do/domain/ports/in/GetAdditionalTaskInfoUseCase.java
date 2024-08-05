@@ -1,7 +1,7 @@
 package com.hexagonal.to_do.domain.ports.in;
 
-import com.hexagonal.to_do.domain.models.AdditionalTaksInfo;
+import com.hexagonal.to_do.domain.models.AdditionalTaskInfo;
 
 public interface GetAdditionalTaskInfoUseCase {
-    AdditionalTaksInfo getAdditionalTaskInfo(Long id);
+    AdditionalTaskInfo getAdditionalTaskInfo(Long id);
 }

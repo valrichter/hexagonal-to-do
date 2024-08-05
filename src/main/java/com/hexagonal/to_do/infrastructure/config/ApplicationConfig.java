@@ -1,9 +1,7 @@
 package com.hexagonal.to_do.infrastructure.config;
 
 import com.hexagonal.to_do.application.usecases.*;
-import com.hexagonal.to_do.domain.models.AdditionalTaksInfo;
 import com.hexagonal.to_do.domain.ports.out.ExternalServicePort;
-import com.hexagonal.to_do.infrastructure.adapters.ExternalServiceAdapter;
 import com.hexagonal.to_do.infrastructure.adapters.JpaTaskRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

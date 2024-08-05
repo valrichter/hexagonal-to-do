@@ -1,6 +1,6 @@
 package com.hexagonal.to_do.application.services;
 
-import com.hexagonal.to_do.domain.models.AdditionalTaksInfo;
+import com.hexagonal.to_do.domain.models.AdditionalTaskInfo;
 import com.hexagonal.to_do.domain.models.Task;
 import com.hexagonal.to_do.domain.ports.in.*;
 
@@ -34,7 +34,7 @@ public class TaskService implements CreateTaskUseCase, DeleteTaskUseCase, Update
     }
 
     @Override
-    public AdditionalTaksInfo getAdditionalTaskInfo(Long id) {
+    public AdditionalTaskInfo getAdditionalTaskInfo(Long id) {
         return getAdditionalTaskInfoUseCase.getAdditionalTaskInfo(id);
     }
 
