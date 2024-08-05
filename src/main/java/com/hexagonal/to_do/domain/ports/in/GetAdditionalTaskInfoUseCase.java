@@ -4,5 +4,4 @@ import com.hexagonal.to_do.domain.models.AdditionalTaksInfo;
 
 public interface GetAdditionalTaskInfoUseCase {
     AdditionalTaksInfo getAdditionalTaskInfo(Long id);
-
 }
