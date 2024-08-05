@@ -9,33 +9,47 @@ import java.util.Optional;
 
 public class taskService implements CreateTaskUseCase, DeleteTaskUseCase, UpdateTaskUseCase, RetrieveTaskUseCase, GetAdditionalTaskInfoUseCase {
 
+    private final CreateTaskUseCase createTaskUseCase;
+    private final DeleteTaskUseCase deleteTaskUseCase;
+    private final RetrieveTaskUseCase retrieveTaskUseCase;
+    private final UpdateTaskUseCase updateTaskUseCase;
+    private final GetAdditionalTaskInfoUseCase getAdditionalTaskInfoUseCase;
+
+    public taskService(CreateTaskUseCase createTaskUseCase, DeleteTaskUseCase deleteTaskUseCase, RetrieveTaskUseCase retrieveTaskUseCase, UpdateTaskUseCase updateTaskUseCase, GetAdditionalTaskInfoUseCase getAdditionalTaskInfoUseCase) {
+        this.createTaskUseCase = createTaskUseCase;
+        this.deleteTaskUseCase = deleteTaskUseCase;
+        this.retrieveTaskUseCase = retrieveTaskUseCase;
+        this.updateTaskUseCase = updateTaskUseCase;
+        this.getAdditionalTaskInfoUseCase = getAdditionalTaskInfoUseCase;
+    }
+
     @Override
     public Task createTask(Task task) {
-        return null;
+        return createTaskUseCase.createTask(task);
     }
 
     @Override
     public boolean deleteTask(Long id) {
-        return false;
+        return deleteTaskUseCase.deleteTask(id);
     }
 
     @Override
     public AdditionalTaksInfo getAdditionalTaskInfo(Long id) {
-        return null;
+        return getAdditionalTaskInfoUseCase.getAdditionalTaskInfo(id);
     }
 
     @Override
     public Optional<Task> getTask(Long id) {
-        return Optional.empty();
+        return retrieveTaskUseCase.getTask(id);
     }
 
     @Override
     public List<Task> getAllTasks() {
-        return List.of();
+        return retrieveTaskUseCase.getAllTasks();
     }
 
     @Override
     public Optional<Task> updateTask(Long id, Task updatedTask) {
-        return Optional.empty();
+        return updateTaskUseCase.updateTask(id, updatedTask);
     }
 }
