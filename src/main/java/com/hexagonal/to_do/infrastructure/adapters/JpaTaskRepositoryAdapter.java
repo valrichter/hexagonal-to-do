@@ -4,10 +4,12 @@ import com.hexagonal.to_do.domain.models.Task;
 import com.hexagonal.to_do.domain.ports.out.TaskRepositoryPort;
 import com.hexagonal.to_do.infrastructure.entities.TaskEntity;
 import com.hexagonal.to_do.infrastructure.repositories.JpaTaskRepository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
 
     private final JpaTaskRepository jpaTaskRepository;
