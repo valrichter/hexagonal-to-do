@@ -36,4 +36,5 @@
 
 ### Arquitectura Hexagonal de la aplicacion
 
-![alt text](<Drawing 2024-08-07 08.27.42.excalidraw.png>)
+<img width=600 src="https://github.com/user-attachments/assets/08d6f35f-b757-4380-989b-73c12247bb38"/>
+
